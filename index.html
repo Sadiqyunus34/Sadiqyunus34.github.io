@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abubakar | Freelance Translation & Document Specialist</title>
+    <title>Abubakar | Language Professional & Digital Creator</title>
     <style>
         :root {
-            --primary: #1e3a8a;
-            --accent: #0284c7;
-            --text-dark: #1f2937;
-            --text-light: #6b7280;
+            --primary: #0f172a;
+            --accent: #d4af37;
+            --accent-hover: #b7952b;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
             --bg-light: #f8fafc;
             --white: #ffffff;
+            --border-color: #e2e8f0;
         }
 
         * {
@@ -40,11 +42,13 @@
         header {
             text-align: center;
             margin-bottom: 35px;
+            border-bottom: 3px solid var(--accent);
+            padding-bottom: 25px;
         }
 
         h1 {
             color: var(--primary);
-            font-size: 26px;
+            font-size: 28px;
             font-weight: 800;
             margin-bottom: 8px;
             letter-spacing: -0.5px;
@@ -52,10 +56,10 @@
 
         .subtitle {
             color: var(--text-light);
-            font-size: 14px;
-            font-weight: 500;
+            font-size: 13px;
+            font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
         }
 
         section {
@@ -63,9 +67,9 @@
         }
 
         h2 {
-            font-size: 18px;
+            font-size: 16px;
             color: var(--primary);
-            border-bottom: 2px solid #e2e8f0;
+            border-bottom: 2px solid var(--border-color);
             padding-bottom: 6px;
             margin-bottom: 15px;
             text-transform: uppercase;
@@ -73,8 +77,15 @@
             letter-spacing: 0.5px;
         }
 
-        p {
+        h3 {
             font-size: 15px;
+            color: var(--primary);
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 14.5px;
             color: var(--text-dark);
             margin-bottom: 15px;
         }
@@ -86,8 +97,8 @@
         li {
             position: relative;
             padding-left: 24px;
-            margin-bottom: 12px;
-            font-size: 15px;
+            margin-bottom: 14px;
+            font-size: 14.5px;
         }
 
         li::before {
@@ -98,11 +109,68 @@
             font-weight: bold;
         }
 
+        .product-card {
+            background-color: var(--white);
+            border: 1px solid var(--border-color);
+            padding: 18px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+        }
+
+        .product-card .price {
+            font-weight: 700;
+            color: var(--primary);
+            margin-top: 8px;
+            font-size: 15px;
+        }
+
+        .bundle-card {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            border-radius: 10px;
+            color: var(--white);
+            margin-top: 20px;
+        }
+
+        .bundle-card h3 {
+            color: var(--accent);
+        }
+
+        .bundle-card p {
+            color: #94a3b8;
+            font-size: 13.5px;
+        }
+
+        .bundle-card .bundle-price {
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--accent);
+            margin-top: 10px;
+        }
+
+        .bundle-card .strike {
+            font-size: 14px;
+            color: #64748b;
+            text-decoration: line-through;
+            font-weight: 400;
+            margin-left: 6px;
+        }
+
+        .contact-box {
+            background-color: var(--bg-light);
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
         .btn-group {
             display: flex;
             flex-direction: column;
             gap: 12px;
-            margin-top: 20px;
         }
 
         .btn {
@@ -113,12 +181,24 @@
             padding: 14px 20px;
             border-radius: 10px;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 16px;
+            font-weight: 700;
+            font-size: 15px;
+            letter-spacing: 0.5px;
+            transition: all 0.2s;
         }
 
         .btn:hover, .btn:active {
+            background-color: #1e293b;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .btn-accent {
             background-color: var(--accent);
+            color: var(--primary);
+        }
+
+        .btn-accent:hover, .btn-accent:active {
+            background-color: var(--accent-hover);
         }
 
         .btn-secondary {
@@ -131,32 +211,14 @@
             background-color: #e2e8f0;
         }
 
-        .store-callout {
-            background-color: #f0fdfa;
-            border: 1px solid #99f6e4;
+        .bio-blockquote {
+            background-color: var(--bg-light);
+            border-left: 4px solid var(--primary);
             padding: 15px;
-            border-radius: 10px;
-            margin-top: 15px;
-        }
-
-        .store-callout h3 {
-            color: #0f766e;
-            font-size: 15px;
-            margin-bottom: 5px;
-        }
-
-        .store-callout p {
-            color: #115e59;
+            font-style: italic;
+            border-radius: 0 10px 10px 0;
+            margin-bottom: 15px;
             font-size: 14px;
-        }
-
-        .contact-box {
-            background-color: #f8fafc;
-            border: 1px solid #e2e8f0;
-            padding: 15px;
-            border-radius: 10px;
-            text-align: center;
-            margin-top: 15px;
         }
 
         footer {
@@ -164,8 +226,8 @@
             margin-top: 40px;
             font-size: 13px;
             color: var(--text-light);
-            border-top: 1px solid #e2e8f0;
-            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
         }
     </style>
 </head>
@@ -175,151 +237,96 @@
         
         <header>
             <h1>Abubakar</h1>
-            <div class="subtitle">Freelance Translation & Document Specialist</div>
+            <div class="subtitle">Language Professional & Digital Creator</div>
         </header>
 
+        <!-- LINGUISTIC & DOCUMENT SERVICES SECTION -->
         <section>
-            <h2>What I Do</h2>
+            <h2>Elite Language & Document Solutions</h2>
             <ul>
-                <li><strong>Professional Translation:</strong> Accurate English translation that keeps your original meaning perfect.</li>
-                <li><strong>Proofreading & Editing:</strong> Polishing grammar and spelling so your documents look professional.</li>
-                <li><strong>Document Processing:</strong> Converting PDFs into clean Word files and handling data entry.</li>
+                <li><strong>Premium Translation & Localization:</strong> Fluent, culturally accurate translation frameworks specializing in English, Linguistics, and Native Language contexts.</li>
+                <li><strong>Technical Proofreading & Review:</strong> Comprehensive editorial review ensuring complete structural grammar, contextual alignment, and global readability.</li>
+                <li><strong>Document Architecture & Optimization:</strong> Specialized structural formatting, conversion processing, and high-precision typographic design for corporate communication assets.</li>
             </ul>
         </section>
 
+        <!-- PROFESSIONAL VALIDATION SECTION -->
         <section>
-            <h2>Why Choose Me?</h2>
-            <ul>
-                <li><strong>High Quality:</strong> Every document is checked manually for absolute precision.</li>
-                <li><strong>Reliable:</strong> Clear communication and projects delivered on time.</li>
-            </ul>
+            <h2>Expertise & Professional Foundation</h2>
+            <div class="bio-blockquote">
+                "Backed by a comprehensive academic framework holding a university degree in English and Linguistics from Bayero University, Kano, I combine advanced syntactic proficiency with detailed asset formatting to provide premium, high-impact communicative clarity for modern businesses."
+            </div>
+            <p>Operating cross-border translation pipelines with absolute structural precision, strict delivery timelines, and standard pricing optimized at a competitive contract rate of <strong>$13.00 / hr</strong>.</p>
         </section>
 
+        <!-- PREMIUM DIGITAL PRODUCTS SECTION -->
         <section>
-            <h2>Digital Products & Blueprints</h2>
-            <p>Master the financial markets and scale your digital skills with my premium, instantly downloadable guides.</p>
+            <h2>Market Intelligence Blueprints & Masterclasses</h2>
+            <p>Access my premium, highly structured educational guide series designed to build advanced asset evaluation frameworks.</p>
 
-            <div class="store-callout">
-                <h3>📈 Trading Blueprints</h3>
-                <p>Learn to read live charts, analyze market structure, avoid scams, and protect your capital with my Crypto and Forex blueprints.</p>
+            <!-- VOLUME 1 -->
+            <div class="product-card">
+                <h3>📈 Volume 1: Crypto Technical Analysis Masterclass</h3>
+                <p style="font-size: 13.5px; color: var(--text-light); margin-bottom: 0;">Advanced Charting & Mathematical Timing Indicators. Discover structural price action mapping, liquidity sweeps, and trend acceleration rules.</p>
+                <div class="price">₦10,000.00</div>
             </div>
 
-            <div class="store-callout" style="background-color: #f0f9ff; border-color: #bae6fd; margin-top: 12px;">
-                <h3 style="color: #0369a1;">📱 Mobile Success & Career Toolkits</h3>
-                <p style="color: #075985;">Discover how to build premium freelance profiles, master cold pitching, and win high-paying jobs entirely using your phone.</p>
+            <!-- VOLUME 2 -->
+            <div class="product-card">
+                <h3>🔍 Volume 2: Crypto Fundamental & On-Chain Masterclass</h3>
+                <p style="font-size: 13.5px; color: var(--text-light); margin-bottom: 0;">Ledger Metrics & Network Analytics. Learn how to track large-scale whale cohort movements, evaluate tokenomics, and query smart contract distributions.</p>
+                <div class="price">₦10,000.00</div>
+            </div>
+
+            <!-- VOLUME 3 -->
+            <div class="product-card">
+                <h3>🛡️ Volume 3: Crypto Risk Management, DeFi Liquidity & Contract Safety</h3>
+                <p style="font-size: 13.5px; color: var(--text-light); margin-bottom: 0;">Capital Preservation & Contract Auditing. Master anti-ruin sizing parameters, evaluate AMM pool depths, and scan contract code configurations for critical backdoors.</p>
+                <div class="price">₦10,000.00</div>
+            </div>
+
+            <!-- COMPLETE MASTERY BUNDLE OFFER -->
+            <div class="bundle-card">
+                <h3>🔥 Limited Offer: The Complete Trilogy Bundle</h3>
+                <p>Acquire the comprehensive Technical, Fundamental, and Risk Management suite in one master package and accelerate your network analytical competence.</p>
+                <div class="bundle-price">₦25,000.00 <span class="strike">₦30,000.00</span></div>
             </div>
         </section>
 
+        <!-- STRATEGIC PORTFOLIO ROUTING LINKS -->
         <section>
-            <h2>Ready to Work Together?</h2>
-            <p>Feel free to reach out directly via email, or use any of my professional profiles below:</p>
+            <h2>Secure Institutional Assets & Engagement</h2>
+            <p>Acquire digital masterclass assets directly or connect via verified international freelance networks to coordinate project scope:</p>
             
             <div class="contact-box">
-                <p style="margin-bottom: 0;">Email: <strong>sadiqunusa34@gmail.com</strong></p>
+                <p style="margin-bottom: 0; font-size: 14px;">Direct Business Inquiries: <strong>sadiqunusa34@gmail.com</strong></p>
             </div>
 
             <div class="btn-group">
-                <a href="https://selar.com/m/abubakar-yunusa2713699" class="btn" target="_blank" rel="noopener">
-                    🛒 Visit My Digital Product Store
+                <!-- PRIMARY DIGITAL PRODUCT ACTIONS -->
+                <a href="https://selar.com/m/abubakar-yunusa2713699" class="btn btn-accent" target="_blank" rel="noopener">
+                    🛒 Secure Individual Volumes on Selar
                 </a>
 
-                <a href="#" class="btn btn-secondary" target="_blank" rel="noopener">
-                    💼 Hire Me on Upwork ($13/hr)
+                <a href="https://linktr.ee/Abubakar_Yunusa" class="btn" target="_blank" rel="noopener">
+                    🌳 Access Complete Product Portfolio (Linktree)
                 </a>
 
-<!-- START OF DIGITAL PRODUCTS SECTION -->
-<section id="digital-products" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #f8fafc; padding: 60px 20px; color: #2d3748;">
-    <div style="max-width: 1100px; margin: 0 auto;">
-        
-        <!-- SECTION HEADER -->
-        <div style="text-align: center; margin-bottom: 50px;">
-            <h2 style="font-size: 28px; color: #0f172a; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">
-                Institutional-Grade Market Intelligence Blueprints
-            </h2>
-            <p style="font-size: 16px; color: #64748b; max-width: 700px; margin: 0 auto; line-height: 1.6;">
-                Master the entire spectrum of digital asset evaluation. This comprehensive trilogy transitions independent market participants from speculative trading into methodical, multi-framework market analysts.
-            </p>
-        </div>
-
-        <!-- 3-COLUMN TRILOGY GRID -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 50px;">
-            
-            <!-- VOLUME 1 CARD -->
-            <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 25px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); display: flex; flex-direction: column; justify-content: space-between;">
-                <div>
-                    <span style="background-color: #edf2f7; color: #4a5568; font-size: 11px; font-weight: bold; padding: 4px 8px; border-radius: 4px; text-transform: uppercase;">Volume 1</span>
-                    <h3 style="font-size: 18px; color: #0f172a; margin: 15px 0 10px 0; font-weight: 700;">Crypto Technical Analysis</h3>
-                    <p style="font-size: 14px; color: #4a5568; line-height: 1.5; margin-bottom: 15px;">
-                        Advanced Charting & Mathematical Timing Indicators. A professional guide to reading price action structures, mapping structural liquidity sweeps, and deploying advanced momentum metrics with strict discipline.
-                    </p>
-                </div>
-                <div>
-                    <div style="font-size: 18px; font-weight: bold; color: #0f172a; margin-bottom: 15px;">₦10,000.00</div>
-                    <a href="YOUR_SELAR_VOLUME_1_LINK" target="_blank" style="display: block; text-align: center; background-color: #0f172a; color: #ffffff; text-decoration: none; padding: 10px; border-radius: 5px; font-size: 14px; font-weight: 600; transition: background 0.2s;">Access Volume 1</a>
-                </div>
-            </div>
-
-            <!-- VOLUME 2 CARD -->
-            <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 25px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); display: flex; flex-direction: column; justify-content: space-between;">
-                <div>
-                    <span style="background-color: #edf2f7; color: #4a5568; font-size: 11px; font-weight: bold; padding: 4px 8px; border-radius: 4px; text-transform: uppercase;">Volume 2</span>
-                    <h3 style="font-size: 18px; color: #0f172a; margin: 15px 0 10px 0; font-weight: 700;">Crypto Fundamental & On-Chain</h3>
-                    <p style="font-size: 14px; color: #4a5568; line-height: 1.5; margin-bottom: 15px;">
-                        Ledger Metrics & Network Analytics. Transition from surface-level evaluation to institutional-grade research. Learn to decode on-chain data, track real-time whale accumulation cohorts, and evaluate tokenomics integrity.
-                    </p>
-                </div>
-                <div>
-                    <div style="font-size: 18px; font-weight: bold; color: #0f172a; margin-bottom: 15px;">₦10,000.00</div>
-                    <a href="YOUR_SELAR_VOLUME_2_LINK" target="_blank" style="display: block; text-align: center; background-color: #0f172a; color: #ffffff; text-decoration: none; padding: 10px; border-radius: 5px; font-size: 14px; font-weight: 600; transition: background 0.2s;">Access Volume 2</a>
-                </div>
-            </div>
-
-            <!-- VOLUME 3 CARD -->
-            <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 25px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); display: flex; flex-direction: column; justify-content: space-between;">
-                <div>
-                    <span style="background-color: #fffaf0; color: #b7791f; border: 1px solid #fbd38d; font-size: 11px; font-weight: bold; padding: 4px 8px; border-radius: 4px; text-transform: uppercase;">Volume 3</span>
-                    <h3 style="font-size: 18px; color: #0f172a; margin: 15px 0 10px 0; font-weight: 700;">Risk Management & Contract Safety</h3>
-                    <p style="font-size: 14px; color: #4a5568; line-height: 1.5; margin-bottom: 15px;">
-                        Capital Preservation & Smart Contract Auditing[span_0](start_span)[span_0](end_span). Master dynamic mathematical position-sizing formulas, read automated market maker pool depth on Solana/BSC, and audit contracts for hidden backdoors before deploying capital[span_1](start_span)[span_1](end_span).
-                    </p>
-                </div>
-                <div>
-                    <div style="font-size: 18px; font-weight: bold; color: #0f172a; margin-bottom: 15px;">₦10,000.00</div>
-                    <a href="YOUR_SELAR_VOLUME_3_LINK" target="_blank" style="display: block; text-align: center; background-color: #0f172a; color: #ffffff; text-decoration: none; padding: 10px; border-radius: 5px; font-size: 14px; font-weight: 600; transition: background 0.2s;">Access Volume 3</a>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- SPECIAL BUNDLE PROMOTION ACCENT BOX -->
-        <div style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-left: 5px solid #d4af37; border-radius: 8px; padding: 35px; color: #ffffff; text-align: center; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);">
-            <span style="background-color: #d4af37; color: #0f172a; font-size: 12px; font-weight: bold; padding: 5px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px;">Limited Time Bundle Offer</span>
-            <h3 style="font-size: 22px; color: #ffffff; margin: 15px 0 10px 0; font-weight: 700;">The Complete Trilogy Mastery Bundle</h3>
-            <p style="font-size: 15px; color: #94a3b8; max-width: 650px; margin: 0 auto 25px auto; line-height: 1.6;">
-                Equip your trading desk with the full suite of Technical, On-Chain, and Security analysis tools required to safely navigate volatile decentralized environments. Get all three volumes together and save ₦5,000.00 instantly.
-            </p>
-            <div style="font-size: 26px; font-weight: 800; color: #d4af37; margin-bottom: 20px;">
-                ₦25,000.00 <span style="font-size: 16px; color: #64748b; text-decoration: line-through; font-weight: 400; margin-left: 8px;">₦30,000.00</span>
-            </div>
-            <a href="YOUR_SELAR_BUNDLE_LINK" target="_blank" style="display: inline-block; background-color: #d4af37; color: #0f172a; text-decoration: none; padding: 12px 35px; border-radius: 5px; font-size: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; transition: transform 0.2s;">
-                Secure the Complete Trilogy Bundle
-            </a>
-        </div>
-
-    </div>
-</section>
-<!-- END OF DIGITAL PRODUCTS SECTION -->
-
-                <a href="#" class="btn btn-secondary" target="_blank" rel="noopener">
-                    🔗 Connect on LinkedIn
+                <!-- PROFESSIONAL FREELANCE & SOCIAL CONTRACT ACTIONS -->
+                <a href="https://www.upwork.com/freelancers/~01b3338380e227a695" class="btn btn-secondary" target="_blank" rel="noopener">
+                    💼 Retain Services on Upwork ($13.00/hr)
                 </a>
 
-                <a href="#" class="btn btn-secondary" target="_blank" rel="noopener">
-                    🐦 Connect on X
+                <a href="https://x.com/Abubakar_Abba_Y" class="btn btn-secondary" target="_blank" rel="noopener">
+                    🐦 Follow Strategic Updates on X (Twitter)
                 </a>
 
-                <a href="#" class="btn btn-secondary" target="_blank" rel="noopener">
-                    📘 Connect on Facebook
+                <a href="https://www.linkedin.com/in/abubakar-yunusa-language-professional-and-digital-creator" class="btn btn-secondary" target="_blank" rel="noopener">
+                    🔗 Coordinate Engagements on LinkedIn
+                </a>
+
+                <a href="https://web.facebook.com/profile.php?id=100091104193581" class="btn btn-secondary" target="_blank" rel="noopener">
+                    📘 Connect via Facebook Professional Profile
                 </a>
             </div>
         </section>
